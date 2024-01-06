@@ -1,0 +1,155 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: #010f23;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            
+            background-image: linear-gradient(#010f23, #00a0ff);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .logo {
+            display:block;
+            margin: auto;
+            text-align: center;
+            
+            animation: rotate 3s 1;
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input {
+            width: 60%;
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        .button {
+            width: 40%;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00a0ff;
+            color: white;
+            font-weight: bold;
+            
+            transition: all 0.3s;
+        }
+        .button:hover {
+            
+            background-color: #0088cc;
+            box-shadow: 0 0 10px white;
+        }
+        .footer {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            margin: 20px;
+            background-color: #0f2a4e; 
+        }
+        .footer-image {
+            width: 100px;
+            height: 100px;
+            margin: 10px; 
+        }
+        .footer-text {
+            width: 50%; 
+            text-align: center; 
+            font-size: 18px; 
+            margin: 10px; 
+            
+            font-family: 'Roboto', sans-serif;
+        }
+        .social { 
+            display: flex;
+            justify-content: space-around;
+            font-size: 24px;
+            margin: 10px;
+        }
+        .social i { 
+            color: white;
+            color:red;
+            
+            text-decoration: none;
+            
+            transition: all 0.3s;
+            
+            filter: grayscale(1);
+        }
+        .social i:hover { 
+            
+            filter: none;
+            transform: scale(1.2);
+        }
+      
+        .social .fa-facebook:hover {
+            filter: hue-rotate(210deg);
+        }
+        .social .fa-instagram:hover {
+            filter: hue-rotate(300deg);
+        }
+        .social .fa-tiktok:hover {
+            filter: hue-rotate(0deg);
+        }
+        .social .fa-youtube:hover {
+            filter: hue-rotate(360deg);
+        }
+       
+        
+        
+    </style>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <img src="slike za web/Logo1.png"lenght="400" height="400"alt="Logo" class="Logo">
+        <h1>Dobrodošli na našu web stranicu</h1>
+        <p>Ovdje možete poslati email našem timu i dobiti brz odgovor.</p>
+
+
+        <a href="mailto:ivor55@live.com" class="button">Pošalji mail</a>
+          
+        </form>
+        <div class="footer">
+            <img src="slike za web/Logo1.png" alt="Footer image" class="footer-image">
+            <div class="footer-text">
+                <p>©️ 2024 Zadrži dah. Sva prava su zadržana.</p>
+                <p>Možete nas pratiti na društvenim mrežama:</p>
+                <div class="social">
+                    <a href="javascript:history.back()"class="button">Vrati se natrag</a>
+                    <a href="index.html"javascript:history.back()></a> 
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
