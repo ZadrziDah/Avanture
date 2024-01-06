@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Donate with PayPal</title>
+  <style>
+    /* Use a media query to make the layout responsive */
+    @media screen and (max-width: 600px) {
+      .container {
+        width: 100%;
+      }
+
+      .left,
+      .right {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    /* Define the layout of the container */
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #012023;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    .body {
+      background-color: #012023;
+    }
+
+    /* Define the style of the left column */
+    .left {
+      width: 60%;
+      margin: 20px;
+      padding: 20px;
+      background-color: #010f23;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    /* Define the style of the right column */
+    .right {
+      width: 30%;
+      margin: 20px;
+      padding: 20px;
+      background-color: #010f23;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    /* Define the style of the PayPal button */
+    #paypal-button-container {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <div class="container">
+    <div class="left">
+      <img src="slike za web/Logo1.png" lenght="300" height="300" class="center">
+      <h3>Dragi prijatelji i pratitelji,</h3>
+      <p>
+        Zahvaljujemo vam što ste dio naše zajednice i što uživate u našem sadržaju. Mi smo mala skupina kreativaca koji
+        se trude stvoriti zanimljive, edukativne i zabavne materijale za vas.
+      </p>
+      <p>
+        Naš rad zahtijeva puno vremena, truda i resursa. Ako želite podržati našu misiju i pomoći nam da nastavimo
+        raditi ono što volimo, molimo vas da razmislite o doniranju našem projektu.
+      </p>
+      <p>
+        Vaša donacija će nam omogućiti da pokrijemo troškove opreme, hostinga, promocije i drugih potreba. Također će
+        nam dati motivaciju i inspiraciju da nastavimo stvarati kvalitetan sadržaj za vas.
+      </p>
+      <p>
+        Možete donirati bilo koji iznos koji želite putem naše web stranice ili našeg PayPal računa. Svaka donacija je
+        dobrodošla i cijenjena.
+      </p>
+      <p>
+        Hvala vam što ste naši vjerni fanovi i što nas podržavate u našem kreativnom putovanju. Nadamo se da ćete
+        nastaviti pratiti naš rad i uživati u njemu.
+      </p>
+
+    </div>
+    <div class="right">
+      <h2>Donirajte sad!</h2>
+      <p>Unesite iznos željene donacije:</p>
+      <form action="https://www.paypal.com/donate" method="post" target="_top">
+        <!-- Identify your business so that you can collect the payments. -->
+        <input type="hidden" name="business" value="zadrzidah@outlook.com">
+        <!-- Specify details about the contribution -->
+        <input type="hidden" name="no_recurring" value="0">
+        <input type="hidden" name="item_name" value="Donation">
+        <input type="hidden" name="currency_code" value="EUR">
+        <!-- Display an input field for the amount -->
+        <input type="text" name="amount" value="" placeholder="Unesite iznos u eurima">
+        <br></br>
+        <!-- Display the payment button. -->
+        <div id="paypal-button-container"></div>
+      </form>
+      <!-- Load the PayPal JavaScript SDK -->
+      <script
+        src="https://www.paypal.com/sdk/js?client-id=AWn2270PLV5O1Kdu0llc6GIOWz44aVL9K5xBlwVGaoN5Z9K83pVvH2dXWblVtI7sAqlTnDsLpNh4tThS&currency=EUR"
+        data-sdk-integration-source="button-factory"></script>
+      <script>
+        // Initialize the PayPal button
+        function initPayPalButton() {
+          paypal.Buttons({
+            style: {
+              shape: 'rect',
+              color: 'gold',
+              layout: 'vertical',
+              label: 'paypal',
+            },
+            // Create the order
+            createOrder: function (data, actions) {
+              return actions.order.create({
+                purchase_units: [{
+                  "amount": {
+                    "currency_code": "EUR",
+                    // Get the amount from the input field
+                    "value": document.querySelector('input[name=amount]').value
+                  }
+                }]
+              });
+            },
+            // Finalize the order
+            onApprove: function (data, actions) {
+              return actions.order.capture().then(function (orderData) {
+                // Show a success message
+                const element = document.getElementById('paypal-button-container');
+                element.innerHTML = '';
+                element.innerHTML = '<h3>Thank you for your donation!</h3>';
+              });
+            },
+            // Handle errors
+            onError: function (err) {
+              console.log(err);
+            }
+          }).render('#paypal-button-container');
+        }
+        initPayPalButton();
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>
