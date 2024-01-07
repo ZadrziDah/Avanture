@@ -4,19 +4,6 @@
 <head>
   <title>Donate with PayPal</title>
   <style>
-    /* Use a media query to make the layout responsive */
-    @media screen and (max-width: 600px) {
-      .container {
-        width: 100%;
-      }
-
-      .left,
-      .right {
-        width: 100%;
-        margin: 0;
-      }
-    }
-
     /* Define the layout of the container */
     .container {
       width: 80%;
@@ -27,13 +14,6 @@
       background-color: #012023;
     }
 
-    @media only screen and (max-width: 1000px) {
-      .container {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-
     .center {
       display: block;
       margin-left: auto;
@@ -42,6 +22,7 @@
     }
 
     .body {
+      display: flex;
       background-color: #012023;
     }
 
@@ -72,6 +53,36 @@
     /* Define the style of the PayPal button */
     #paypal-button-container {
       text-align: center;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .left {
+        width: 90%;
+        margin: 20px;
+        padding: 20px;
+        background-color: #010f23;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .right {
+        width: 90%;
+        margin: 20px;
+        padding: 20px;
+        background-color: #010f23;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+      }
     }
   </style>
 </head>
