@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <style>
         * {
@@ -12,21 +13,39 @@
         }
 
         .header {
-            background-color: #010f23; 
+            background-color: #010f23;
             color: white;
             padding: 20px;
             text-align: center;
         }
 
         .nav {
-            background-color: #e6f2ff;
-            padding: 10px;
+            height:50px;
+            background-color: #010f23;
             display: flex;
+            border-top: 1px solid white;
+            display: flex;
+            flex: 6;
+            flex-flow: row wrap;
+            align-items:center;
+            align-content:center;
+
             justify-content: space-around;
+
+        }
+
+        .navbutton {
+            flex: 1;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .navbutton:hover {
+            background-color: rgb(0, 145, 255, 0.9);
         }
 
         .nav a {
-            color: #1a75ff;
+            color: white;
             text-decoration: none;
         }
 
@@ -75,14 +94,21 @@
         }
 
         .footer {
-            background-color: #1a75ff; 
+            background-color: #1a75ff;
             color: white;
             padding: 10px;
-            text-align:center; 
+            text-align: center;
+        }
+
+        .logo{
+            border-radius: 25px;
+      box-shadow: 0 0 14px rgb(0, 145, 255);
+
         }
 
         @media (max-width: 768px) {
-            .main {color: #e6f2ff;
+            .main {
+                color: #e6f2ff;
                 flex-direction: column;
             }
 
@@ -96,39 +122,75 @@
         }
     </style>
 </head>
+
 <body>
     <div class="header">
         <h1>Dobro Došli!</h1>
-        <img src="slike za web/Logo1.png" lenght="600" height="600">
-        
-        <h1>Udahnite nove avanture!<color:White/h1>  
-  
+        <img class="logo" src="slike za web/Logo1.png" lenght="560" height="560">
+        <h1>Udahnite nove avanture!</h1>
+
     </div>
+
     <div class="nav">
-    <a href="#">
-    <button style="background-color: #010f23;color:#e6f2ff;border-radius:500px">Početna</button>
-    </a>        
-    <a href="https://hr.wikipedia.org/wiki/Podvodni_ribolov">
-    <button style="background-color: #010f23;color:#e6f2ff;border-radius:500px">Podvodni ribolov</button>
-    </a>         
-    <a href="https://hr.wikipedia.org/wiki/Planinarstvo">
-    <button style="background-color: #010f23;color:#e6f2ff;border-radius:500px">planinarenje</button>
-    </a>        
-    <a href="https://hr.wikipedia.org/wiki/Kampiranje">
-    <button style="background-color: #010f23;color:#e6f2ff;border-radius:500px">Kampiranje</button>
-    <a href="Kontakt.html">
-    <button style="background-color: #010f23;color:#e6f2ff;border-radius:500px">Kontakt</button>
-    </a>
-    </a>
-    <a href="Donacije.html">
-    <button style="background-color: #010f23;color:#e6f2ff;border-radius:500px">Donacije</button>
-    </a>
-        
+        <div class="navbutton">
+            <a href="#" style="text-decoration: none;">
+                <p>
+                    Početna
+                </p>
+            </a>
+        </div>
+
+        <div class="navbutton">
+            <a href="https://hr.wikipedia.org/wiki/Podvodni_ribolov" style="text-decoration: none;">
+                <p>
+                    Podvodni ribolov
+                </p>
+            </a>
+
+        </div>
+
+        <div class="navbutton">
+            <a href="https://hr.wikipedia.org/wiki/Planinarstvo" style="text-decoration: none;">
+                <p>
+                    Planinarenje
+                </p>
+            </a>
+
+        </div>
+        <div class="navbutton">
+            <a href="https://hr.wikipedia.org/wiki/Kampiranje" style="text-decoration: none;">
+                <p>
+                    Kampiranje
+                </p>
+            </a>
+
+        </div>
+        <div class="navbutton" >
+            <a href="Kontakt.html" style="text-decoration: none;">
+                <p>
+                    Kontakt
+                </p>
+            </a>
+
+        </div>
+        <div class="navbutton">
+            <a href="Donacije.html" style="text-decoration: none;">
+                <p>
+                    Donacije
+                </p>
+            </a>
+
+        </div>
+
     </div>
     <div class="main">
         <div class="sidebar">
             <h2>O nama</h2>
-            <p>Želite li vidjeti kako izgleda podvodni ribolov, planinarenje i kampiranje u različitim dijelovima Hrvatske i svijeta? Onda ste na pravom mjestu! Na ovoj web stranici možete pogledati naše videozapise sa naših avantura i doživjeti ljepotu i uzbuđenje ovih aktivnosti. Možete vidjeti kako lovimo ribe pod vodom, kako se penjemo na vrhove planina i kako uživamo u prirodi i druženju na kampiranju. Također možete saznati više o našoj opremi, tehnikama, lokacijama i savjetima…
+            <p>Želite li vidjeti kako izgleda podvodni ribolov, planinarenje i kampiranje u različitim dijelovima
+                Hrvatske i svijeta? Onda ste na pravom mjestu! Na ovoj web stranici možete pogledati naše videozapise sa
+                naših avantura i doživjeti ljepotu i uzbuđenje ovih aktivnosti. Možete vidjeti kako lovimo ribe pod
+                vodom, kako se penjemo na vrhove planina i kako uživamo u prirodi i druženju na kampiranju. Također
+                možete saznati više o našoj opremi, tehnikama, lokacijama i savjetima…
             </p>
             <h2> Društvene mreže</h2>
             <p>Možete nas pratiti i na ovim društvenim mrežama:</p>
@@ -142,33 +204,41 @@
         <div class="content">
             <h2>Naše najnovije objave</h2>
             <div class="card">
-                <img src="slike za web/zvjezda.jpg" alt="Podvodni ribolov" target=_self title="Kvrgava zvjezdača (Marthasterias glacialis) – priobalna vrsta, živi u pojasu od površine do 50 metara dubine. Ima pet krakova na kojima se nalaze ispupčenja, kvrge s bodljama čija boja ovisi o terenu na kojem obitava. Naraste do 40 cm i jedna je od najvećih zvijezda u Jadranskom moru. Hrani se raznim vrstama mekušaca i uginulom ribom, a napada i druge zvjezdače.">
+                <img src="slike za web/zvjezda.jpg" alt="Podvodni ribolov" target=_self
+                    title="Kvrgava zvjezdača (Marthasterias glacialis) – priobalna vrsta, živi u pojasu od površine do 50 metara dubine. Ima pet krakova na kojima se nalaze ispupčenja, kvrge s bodljama čija boja ovisi o terenu na kojem obitava. Naraste do 40 cm i jedna je od najvećih zvijezda u Jadranskom moru. Hrani se raznim vrstama mekušaca i uginulom ribom, a napada i druge zvjezdače.">
                 <h3>Podvodni ribolov na moru</h3>
-                <p>Podvodni ribolov je jedan od najuzbudljivijih i najljepših načina da istražite podvodni svijet i ulovite neke ribe. Ovo je moj vodič za početnike koji žele probati ovaj sport.</p>
+                <p>Podvodni ribolov je jedan od najuzbudljivijih i najljepših načina da istražite podvodni svijet i
+                    ulovite neke ribe. Ovo je moj vodič za početnike koji žele probati ovaj sport.</p>
                 <a href="podvodni.html">Pročitaj više</a>
             </div>
             <div class="card">
-               
+
                 <h3>Planinarenje po planinama</h3>
-                <video controls autoplay muted loop src="slike za web/planinarenje.mp4" height="350" width="600" alt=kampiranje></video>
-                <p>Planinarenje je odličan način da ojačate svoje tijelo i duh, te da uživate u prekrasnim pogledima i svježem zraku. Ovo su neke od mojih omiljenih staza za planinarenje u Hrvatskoj.</p>
+                <video controls autoplay muted loop src="slike za web/planinarenje.mp4" height="350" width="600"
+                    alt=kampiranje></video>
+                <p>Planinarenje je odličan način da ojačate svoje tijelo i duh, te da uživate u prekrasnim pogledima i
+                    svježem zraku. Ovo su neke od mojih omiljenih staza za planinarenje u Hrvatskoj.</p>
                 <a href="planinarenje.html">Pročitaj više</a>
             </div>
             <div class="card">
-             
+
                 <h3>Kampiranje</h3>
-                <video controls autoplay muted loop src="slike za web/kampiranje.mp4" height="350" widt="600" target=_self title="Velebit" alt=Kampiranje></video>
-                <p>Kampiranje je jednostavan i jeftin način da pobjegnete od gradske buke i stresa, te da se povežete s prirodom i svojim prijateljima. Ovo su neki od mojih savjeta za sigurno i ugodno kampiranje.</p>
-                <a href="kampiranje.html">Pročitaj više</a> 
-                
-            
+                <video controls autoplay muted loop src="slike za web/kampiranje.mp4" height="350" widt="600"
+                    target=_self title="Velebit" alt=Kampiranje></video>
+                <p>Kampiranje je jednostavan i jeftin način da pobjegnete od gradske buke i stresa, te da se povežete s
+                    prirodom i svojim prijateljima. Ovo su neki od mojih savjeta za sigurno i ugodno kampiranje.</p>
+                <a href="kampiranje.html">Pročitaj više</a>
+
+
             </div>
-            <img src="slike za web/vatra kraj.jpg" height="350" width=600> 
+            <img src="slike za web/vatra kraj.jpg" height="350" width=600>
         </div>
     </div>
-    <div class="footer"> 
-        <img src="slike za web/Logo1.png" height="30" width=30>  <p>&copy; 2024 Zadrži dah. Sva prava su zadržana.</p>
-         
+    <div class="footer">
+        <img src="slike za web/Logo1.png" height="30" width=30>
+        <p>&copy; 2024 Zadrži dah. Sva prava su zadržana.</p>
+
     </div>
 </body>
+
 </html>
