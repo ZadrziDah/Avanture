@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
             box-sizing: border-box;
@@ -20,15 +21,15 @@
         }
 
         .nav {
-            height:50px;
+            height: 50px;
             background-color: #010f23;
             display: flex;
             border-top: 1px solid white;
             display: flex;
             flex: 6;
             flex-flow: row wrap;
-            align-items:center;
-            align-content:center;
+            align-items: center;
+            align-content: center;
 
             justify-content: space-around;
 
@@ -100,10 +101,41 @@
             text-align: center;
         }
 
-        .logo{
+        .logo {
             border-radius: 25px;
-      box-shadow: 0 0 14px rgb(0, 145, 255);
+            box-shadow: 0 0 14px rgb(0, 145, 255);
 
+        }
+
+        .social { 
+            display: flex;
+            justify-content: space-around;
+            font-size: 24px;
+            margin: 10px;
+        }
+        .social i { 
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;            
+        }
+        .social i:hover { 
+            
+            color:rgb(0, 145, 255);
+            transform: scale(1.2);
+        }
+
+        .social .fa-facebook:hover {
+            color:rgb(0, 145, 255);
+
+        }
+        .social .fa-instagram:hover {
+            filter: hue-rotate(60deg);
+        }
+        .social .fa-tiktok:hover {
+            color:rgb(0, 145, 255);
+        }
+        .social .fa-youtube:hover {
+            color:red
         }
 
         @media (max-width: 768px) {
@@ -165,7 +197,7 @@
             </a>
 
         </div>
-        <div class="navbutton" >
+        <div class="navbutton">
             <a href="Kontakt.html" style="text-decoration: none;">
                 <p>
                     Kontakt
@@ -194,12 +226,12 @@
             </p>
             <h2> Društvene mreže</h2>
             <p>Možete nas pratiti i na ovim društvenim mrežama:</p>
-            <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#" target=_self title="Ovaj link vas vodi na naš youtube">YouTube</a></li>
-                <li><a href="#">TikTok</a></li>
-            </ul>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
         </div>
         <div class="content">
             <h2>Naše najnovije objave</h2>
