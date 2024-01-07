@@ -91,22 +91,31 @@
       }
 
       .text-container {
-        padding: 5%; 
+        padding: 5%;
         line-height: 1.2;
       }
 
-      .input-ammmount{
+      .field {
+        width: 100%;
         flex-direction: column;
       }
 
-      .form-control{
-        width: 85.5%;
+      .paypal-button-container {
+        width: fit-content;
+      }
+
+      .form-control {
         height: 50px;
         font-size: 22px;
-        margin-bottom: 18px;
         padding-left: 20px;
-        border-radius: 4px;
+        padding-right: 20px;;
+        margin-right: -8px;
         border: 1px solid #2d9fd9;
+      }
+
+      .div-input{
+        width: 100%;
+        padding-bottom: 40px;
       }
     }
   </style>
@@ -153,13 +162,16 @@
         <input type="hidden" name="item_name" value="Donation">
         <input type="hidden" name="currency_code" value="EUR">
         <!-- Display an input field for the amount -->
-        <div class="input-ammount">
-          <p class="form-label">   Unesite iznos željene donacije:</p>
-          <input type="email" class="form-control" name="amount" value=""
-            placeholder="Unesite iznos u eurima">
+        <div class="field">
+          <div>
+            <p class="form-label"> Unesite iznos željene donacije:</p>
+          </div>
+          <div class="div-input">
+            <input type="email" class="form-control" name="amount" value="" placeholder="Unesite iznos u eurima">
+          </div>
+          <!-- Display the payment button. -->
+          <div id="paypal-button-container"></div>
         </div>
-        <!-- Display the payment button. -->
-        <div id="paypal-button-container"></div>
       </form>
       <!-- Load the PayPal JavaScript SDK -->
       <script
