@@ -95,18 +95,26 @@
         }
 
         .footer {
+            
             background-color: #1a75ff;
             color: white;
+            padding: center;
             display: flex;
-            width: 100%;
-            flex-wrap: wrap;
+            flex-wrap:wrap;
             justify-content: center;
-            align-items: center;
+            max-width: 100%;
+
+
+
+
+
+
+
+
+
+
         }
 
-        .footer-text{
-            padding-left: 1%;
-        }
 
         .logo {
             border-radius: 25px;
@@ -150,52 +158,18 @@
             color: red
         }
 
-        @media (max-width: 1000px) {
+        @media (max-width: 768px) {
             .main {
                 color: #e6f2ff;
-                background-color: #010f23;
-                flex-direction: column-reverse;
-                align-items: center;
-            }
-
-            .sidebar {
-                width: 80%;
-                background-color: #010f23;
-                color: white;
-                display: flex;
                 flex-direction: column;
             }
 
-            .sidebar-top {
-                padding-right: 10%;
-                padding-left: 10%;
-                padding-top: 0%;
-                padding-bottom: 0%;
-            }
-
-            .sidebar-bottom {
-                padding-right: 10%;
-                padding-left: 10%;
-                padding-bottom: 3%;
-                padding-top: 0%;
-            }
-
-            .social {
-                display: flex;
-                width: 80%;
-                justify-content: space-around;
-                justify-self: center;
-                align-self: center;
+            .sidebar {
+                width: 100%;
             }
 
             .content {
                 width: 100%;
-            }
-
-            .bottom-picture {
-                display: flex;
-                align-items: center;
-                justify-content: center;
             }
         }
     </style>
@@ -263,20 +237,15 @@
     </div>
     <div class="main">
         <div class="sidebar">
-            <div class="sidebar-top">
-                <h2>O nama</h2>
-                <p>Želite li vidjeti kako izgleda podvodni ribolov, planinarenje i kampiranje u različitim dijelovima
-                    Hrvatske i svijeta? Onda ste na pravom mjestu! Na ovoj web stranici možete pogledati naše
-                    videozapise sa
-                    naših avantura i doživjeti ljepotu i uzbuđenje ovih aktivnosti. Možete vidjeti kako lovimo ribe pod
-                    vodom, kako se penjemo na vrhove planina i kako uživamo u prirodi i druženju na kampiranju. Također
-                    možete saznati više o našoj opremi, tehnikama, lokacijama i savjetima…
-                </p>
-            </div>
-            <div class="sidebar-bottom">
-                <h2> Društvene mreže</h2>
-                <p>Možete nas pratiti i na ovim društvenim mrežama:</p>
-            </div>
+            <h2>O nama</h2>
+            <p>Želite li vidjeti kako izgleda podvodni ribolov, planinarenje i kampiranje u različitim dijelovima
+                Hrvatske i svijeta? Onda ste na pravom mjestu! Na ovoj web stranici možete pogledati naše videozapise sa
+                naših avantura i doživjeti ljepotu i uzbuđenje ovih aktivnosti. Možete vidjeti kako lovimo ribe pod
+                vodom, kako se penjemo na vrhove planina i kako uživamo u prirodi i druženju na kampiranju. Također
+                možete saznati više o našoj opremi, tehnikama, lokacijama i savjetima…
+            </p>
+            <h2> Društvene mreže</h2>
+            <p>Možete nas pratiti i na ovim društvenim mrežama:</p>
             <div class="social">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -314,16 +283,12 @@
 
 
             </div>
-            <div class="bottom-picture">
-                <div>
-                    <img src="slike za web/vatra kraj.jpg" height="350" width=600>
-                </div>
-            </div>
+            <img src="slike za web/vatra kraj.jpg" height="350" width=600>
         </div>
     </div>
     <div class="footer">
-        <img src="slike za web/Logo1.png" height="30" width=30>
-        <p class="footer-text">&copy; 2024 Zadrži dah. Sva prava su zadržana.</p>
+        <img src="slike za web/Logo1.png" height="30" width="30">
+        <p>&copy; 2024 Zadrži dah. Sva prava su zadržana.</p>
 
     </div>
 </body>
