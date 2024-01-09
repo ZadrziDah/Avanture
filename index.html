@@ -57,13 +57,39 @@
         .main {
             display: flex;
             flex-wrap: wrap;
+            flex-direction: column-reverse;
+            align-items: center;
+            background-color: #010f23;
+
         }
 
         .sidebar {
-            width: 25%;
             background-color: #010f23;
             color: #e6f2ff;
-            padding: 20px;
+            background-image: url("slike za web/vatra kraj.jpg");
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar-wrapper2 {
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 100%;
+            padding: 2%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .sidebar-wrapper {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 50%;
+            padding: 2%;
+            display: flex;
+            flex-direction: column;
+            border-radius: 25px;
         }
 
         .content {
@@ -71,17 +97,69 @@
             background-color: #010f23;
             color: #e6f2ff;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
         }
 
         .card {
             color: #e6f2ff;
-            margin: 10px;
-            border: 1px solid #1a75ff;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 5%;
+            display: flex;
+            flex-direction: column;
+            flex: 4;
+            border-radius: 25px;
+            box-shadow: 0 14px 28px rgba(0, 145, 255, 0.22);
         }
 
-        .card img {
+        .card:hover {
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            box-shadow: 0 0 14px rgb(0, 145, 255);
+        }
+
+        .card-image {
+            border: 2px;
+            border-radius: 25px;
+            height: 30rem;
+            z-index: 1;
+        }
+
+        .card-image img {
+            border-radius: 25px;
+        }
+
+        .card-content {
+            background-color: #010f23;
+            border-radius: 25px;
+            margin-top: -5%;
+            padding: 2px 40px;
+            box-shadow: 0 0 15px rgb(0, 145, 255);
+            z-index: 2;
+        }
+
+        .card-button {
+            background-color: rgb(26, 117, 255, 0.8);
+            border-radius: 25px;
+            margin-bottom: -2rem;
+            width: max-content;
+        }
+
+        .card-button:hover {
+            background-color: rgb(26, 117, 255, 1.0);
+        }
+
+        .card-image img {
+            height: 100%;
             width: 100%;
-            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-image video {
+            border-radius: 25px;
+            height: 100%;
+            width: 100%;
             object-fit: cover;
         }
 
@@ -104,7 +182,7 @@
             align-items: center;
         }
 
-        .footer-text{
+        .footer-text {
             padding-left: 1%;
         }
 
@@ -191,12 +269,6 @@
             .content {
                 width: 100%;
             }
-
-            .bottom-picture {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
         }
     </style>
 </head>
@@ -263,60 +335,84 @@
     </div>
     <div class="main">
         <div class="sidebar">
-            <div class="sidebar-top">
-                <h2>O nama</h2>
-                <p>Želite li vidjeti kako izgleda podvodni ribolov, planinarenje i kampiranje u različitim dijelovima
-                    Hrvatske i svijeta? Onda ste na pravom mjestu! Na ovoj web stranici možete pogledati naše
-                    videozapise sa
-                    naših avantura i doživjeti ljepotu i uzbuđenje ovih aktivnosti. Možete vidjeti kako lovimo ribe pod
-                    vodom, kako se penjemo na vrhove planina i kako uživamo u prirodi i druženju na kampiranju. Također
-                    možete saznati više o našoj opremi, tehnikama, lokacijama i savjetima…
-                </p>
+            <div class="sidebar-wrapper2">
+                <div class="sidebar-wrapper">
+                <div class="sidebar-top">
+                    <h2>O nama</h2>
+                    <p>Želite li vidjeti kako izgleda podvodni ribolov, planinarenje i kampiranje u različitim
+                        dijelovima
+                        Hrvatske i svijeta? Onda ste na pravom mjestu! Na ovoj web stranici možete pogledati naše
+                        videozapise sa
+                        naših avantura i doživjeti ljepotu i uzbuđenje ovih aktivnosti. Možete vidjeti kako lovimo ribe
+                        pod
+                        vodom, kako se penjemo na vrhove planina i kako uživamo u prirodi i druženju na kampiranju.
+                        Također
+                        možete saznati više o našoj opremi, tehnikama, lokacijama i savjetima…
+                    </p>
+                </div>
+                <div class="sidebar-bottom">
+                    <h2> Društvene mreže</h2>
+                    <p>Možete nas pratiti i na ovim društvenim mrežama:</p>
+                </div>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
-            <div class="sidebar-bottom">
-                <h2> Društvene mreže</h2>
-                <p>Možete nas pratiti i na ovim društvenim mrežama:</p>
-            </div>
-            <div class="social">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
         <div class="content">
             <h2>Naše najnovije objave</h2>
             <div class="card">
-                <img src="slike za web/zvjezda.jpg" alt="Podvodni ribolov" target=_self
-                    title="Kvrgava zvjezdača (Marthasterias glacialis) – priobalna vrsta, živi u pojasu od površine do 50 metara dubine. Ima pet krakova na kojima se nalaze ispupčenja, kvrge s bodljama čija boja ovisi o terenu na kojem obitava. Naraste do 40 cm i jedna je od najvećih zvijezda u Jadranskom moru. Hrani se raznim vrstama mekušaca i uginulom ribom, a napada i druge zvjezdače.">
-                <h3>Podvodni ribolov na moru</h3>
-                <p>Podvodni ribolov je jedan od najuzbudljivijih i najljepših načina da istražite podvodni svijet i
-                    ulovite neke ribe. Ovo je moj vodič za početnike koji žele probati ovaj sport.</p>
-                <a href="https://hr.wikipedia.org/wiki/Podvodni_ribolov">Pročitaj više</a>
+                <div class="card-image">
+                    <img src="slike za web/zvjezda.jpg" alt="Podvodni ribolov" target=_self
+                        title="Kvrgava zvjezdača (Marthasterias glacialis) – priobalna vrsta, živi u pojasu od površine do 50 metara dubine. Ima pet krakova na kojima se nalaze ispupčenja, kvrge s bodljama čija boja ovisi o terenu na kojem obitava. Naraste do 40 cm i jedna je od najvećih zvijezda u Jadranskom moru. Hrani se raznim vrstama mekušaca i uginulom ribom, a napada i druge zvjezdače.">
+                </div>
+                <div class="card-content">
+                    <h3>Podvodni ribolov na moru</h3>
+                    <p>Podvodni ribolov je jedan od najuzbudljivijih i najljepših načina da istražite podvodni svijet i
+                        ulovite neke ribe. Ovo je moj vodič za početnike koji žele probati ovaj sport.</p>
+                    <div class="card-button">
+                        <a style="text-decoration: none;" href="https://hr.wikipedia.org/wiki/Podvodni_ribolov">
+                            <p style="color: white;">Pročitaj više</p>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="card">
-
-                <h3>Planinarenje po planinama</h3>
-                <video controls autoplay muted loop src="slike za web/planinarenje.mp4" height="350" width="600"
-                    alt=kampiranje></video>
-                <p>Planinarenje je odličan način da ojačate svoje tijelo i duh, te da uživate u prekrasnim pogledima i
-                    svježem zraku. Ovo su neke od mojih omiljenih staza za planinarenje u Hrvatskoj.</p>
-                <a href="https://hr.wikipedia.org/wiki/Planinarstvo">Pročitaj više</a>
+                <div class="card-image">
+                    <video autoplay muted loop src="slike za web/planinarenje.mp4" alt=kampiranje></video>
+                </div>
+                <div class="card-content">
+                    <h3>Planinarenje po planinama</h3>
+                    <p>Planinarenje je odličan način da ojačate svoje tijelo i duh, te da uživate u prekrasnim pogledima
+                        i
+                        svježem zraku. Ovo su neke od mojih omiljenih staza za planinarenje u Hrvatskoj.
+                    </p>
+                    <div class="card-button">
+                        <a style="text-decoration: none;" href="https://hr.wikipedia.org/wiki/Podvodni_ribolov">
+                            <p style="color: white;">Pročitaj više</p>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="card">
-
-                <h3>Kampiranje</h3>
-                <video controls autoplay muted loop src="slike za web/kampiranje.mp4" height="350" widt="600"
-                    target=_self title="Velebit" alt=Kampiranje></video>
-                <p>Kampiranje je jednostavan i jeftin način da pobjegnete od gradske buke i stresa, te da se povežete s
-                    prirodom i svojim prijateljima. Ovo su neki od mojih savjeta za sigurno i ugodno kampiranje.</p>
-                <a href="https://hr.wikipedia.org/wiki/Kampiranje">Pročitaj više</a>
-
-
-            </div>
-            <div class="bottom-picture">
-                <div>
-                    <img src="slike za web/vatra kraj.jpg" height="350" width=600>
+                <div class="card-image">
+                    <video autoplay muted loop src="slike za web/kampiranje.mp4" height="350" widt="600" target=_self
+                        title="Velebit" alt=Kampiranje></video>
+                </div>
+                <div class="card-content">
+                    <h3>Kampiranje</h3>
+                    <p>Kampiranje je jednostavan i jeftin način da pobjegnete od gradske buke i stresa, te da se
+                        povežete s
+                        prirodom i svojim prijateljima. Ovo su neki od mojih savjeta za sigurno i ugodno kampiranje.</p>
+                    <div class="card-button">
+                        <a style="text-decoration: none;" href="https://hr.wikipedia.org/wiki/Podvodni_ribolov">
+                            <p style="color: white;">Pročitaj više</p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
